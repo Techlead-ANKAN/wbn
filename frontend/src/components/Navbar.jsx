@@ -1,6 +1,6 @@
 import React from 'react';
-import './Navbar.css'; // Assuming your styles are here
-
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   return (
@@ -13,54 +13,60 @@ const Navbar = () => {
         </div>
 
         <nav className="main-nav">
-          <a href="#">HOME</a>
-          <a href="#">ABOUT US</a>
+          <Link to="/">HOME</Link>
+          <Link to="/about">ABOUT US</Link>
 
           {/* GALLERIES DROPDOWN */}
           <div className="dropdown">
-            <a href="#">
+            <span>
               GALLERIES <i className="fa fa-caret-down"></i>
-            </a>
+            </span>
             <ul className="dropdown-menu">
-              <li><a href="mentorsgall.html">Mentors Gallery</a></li>
-              <li><a href="members-gallery.html">Members Gallery</a></li>
+              <li><Link to="/mentors-gallery">Mentors Gallery</Link></li>
+              <li><Link to="/members-gallery">Members Gallery</Link></li>
             </ul>
           </div>
 
           {/* MARKETPLACE DROPDOWN */}
           <div className="dropdown highlighted">
-            <a href="#">
+            <span>
               MARKETPLACE <i className="fa fa-caret-down"></i>
-            </a>
+            </span>
             <ul className="dropdown-menu">
-              <li><a href="merchandise.html">Merchandise</a></li>
-              <li><a href="used-gear.html">Used Gear</a></li>
+              <li><Link to="/merchandise">Merchandise</Link></li>
+              <li><Link to="/used-gear">Used Gear</Link></li>
             </ul>
           </div>
 
-          <a href="#">BLOG</a>
-          <a href="#">CONTACT US</a>
+          <Link to="/blog">BLOG</Link>
+          <Link to="/contact">CONTACT US</Link>
         </nav>
 
-        <a href="signup.html" className="member-btn">MEMBER ZONE</a>
+        <Link to="/signup" className="member-btn">MEMBER ZONE</Link>
       </header>
 
       {/* BOTTOM NAVIGATION */}
       <div className="bottom-bar">
         <div className="left-nav">
-          <a href="workshop.html">Workshops</a>
-          <a href="safari.html">Safaris</a>
-          <a href="competition.html">Competitions</a>
-          <a href="exhibition.html">Exhibitions</a>
-          <a href="safinfo.html">Parks & Reserves</a>
-          <a href="#">Conservation</a>
+          <Link to="/workshops">Workshops</Link>
+          <Link to="/safaris">Safaris</Link>
+          <Link to="/competitions">Competitions</Link>
+          <Link to="/exhibitions">Exhibitions</Link>
+          <Link to="/parks-reserves">Parks & Reserves</Link>
+          <Link to="/conservation">Conservation</Link>
         </div>
 
         <div className="right-nav">
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-youtube"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
